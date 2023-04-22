@@ -4,11 +4,10 @@ import pandas as pd
 import numpy as np
 from streamlit_option_menu import option_menu
 import joblib
-import pickle
 
 
 # loading the saved model
-loaded_model = pickle.load(open('GradientBoost.pkl', 'rb'))
+loaded_model = joblib.load('GradientBoost.joblib')
 
 
 # creating a function for Prediction
@@ -68,4 +67,4 @@ def main():
     
     
 if __name__ == '__main__':
-    main()
+  main()
